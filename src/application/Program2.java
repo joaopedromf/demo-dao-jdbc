@@ -17,9 +17,13 @@ public class Program2 {
 
         System.out.println("\n=== TEST 2: findAll ====");
         List<Department> list = departmentDao.findAll();
-        
         for(Department department : list){
             System.out.println(department);
         }
+
+        System.out.println("\n=== TEST 3: insert ====");
+        Department department = new Department(null, "Music");
+        departmentDao.insert(department);
+        System.out.println("Inserted! New id: " + department.getId());
     }
 }
